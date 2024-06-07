@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
+import { motion, } from "framer-motion";
 import ParallaxText from "../components/ParallaxText";
 import anim from "../utils/animate";
 import OverLay from "../components/OverLay";
+import { useSectionInView } from "../hooks/useSectionInView";
 const titleFirstVar = {
   initial: {
     y: 100,
@@ -17,9 +18,13 @@ const titleFirstVar = {
 };
 
 const Home = () => {
+  const { ref } = useSectionInView("Home",0.5);
+  
   return (
     <div
+    id="home"
       className="h-[120vh] w-full relative bg-gray-900 py-[12%] p-[5%]"
+      ref={ref}
     >
       <OverLay />
       <div className="flex items-end flex-col gap-10">

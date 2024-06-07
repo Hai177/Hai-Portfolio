@@ -38,19 +38,19 @@ const Modal = ({ projects, modal }) => {
       ease: "power3",
     });
     const moveCursorX = gsap.quickTo(cursor.current, "left", {
-      duration: 0.5,
+      duration: 0.4,
       ease: "power3",
     });
     const moveCursorY = gsap.quickTo(cursor.current, "top", {
-      duration: 0.5,
+      duration: 0.4,
       ease: "power3",
     });
     const moveCursorLabelX = gsap.quickTo(cursorLabel.current, "left", {
-      duration: 0.45,
+      duration: 0.3,
       ease: "power3",
     });
     const moveCursorLabelY = gsap.quickTo(cursorLabel.current, "top", {
-      duration: 0.45,
+      duration: 0.3,
       ease: "power3",
     });
     window.addEventListener("mousemove", (e) => {
@@ -71,12 +71,12 @@ const Modal = ({ projects, modal }) => {
         variants={scaleVar}
         initial={"initial"}
         animate={active ? "open" : "close"}
-        className="flex h-[300px] w-[400px] items-center justify-center absolute pointer-events-none overflow-hidden"
+        className="flex h-[300px] w-[400px] items-center justify-center absolute pointer-events-none overflow-hidden "
       >
         <div
           style={{
             top: index * -100 + "%",
-            transition: " top 0.6s cubic-bezier(0.76, 0, 0.24, 1) ",
+            transition: " top 0.5s cubic-bezier(0.76, 0, 0.24, 1) ",
           }}
           className="absolute w-full h-full "
         >
@@ -101,14 +101,14 @@ const Modal = ({ projects, modal }) => {
         initial={"initial"}
         animate={active ? "open" : "close"}
         ref={cursor}
-        className="size-[50px] rounded-full bg-[#ff98a2] absolute pointer-events-none text-white font-semibold flex items-center justify-center cursor-pointer"
+        className="size-[60px] rounded-full bg-[#ff98a2] absolute pointer-events-none text-white font-semibold flex items-center justify-center cursor-pointer"
       ></motion.div>
       <motion.div
         variants={scaleVar}
         initial={"initial"}
         animate={active ? "open" : "close"}
         ref={cursorLabel}
-        className="size-[50px] rounded-full bg-[#ff98a2] absolute pointer-events-none text-white font-semibold flex items-center justify-center cursor-pointer"
+        className="size-[60px] rounded-full bg-[#ff98a2] absolute pointer-events-none text-black font-semibold flex items-center justify-center cursor-pointer"
       >
         View
       </motion.div>

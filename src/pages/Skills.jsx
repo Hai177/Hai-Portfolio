@@ -35,6 +35,8 @@ const skillList = [
     name: "TypeScript",
     icon: <SiTypescript />,
   },
+];
+const skillList2 = [
   {
     name: "React",
     icon: <SiReact />,
@@ -65,20 +67,32 @@ const Skills = () => {
   const x = useTransform(scrollYProgress, [0, 1], [-150, 150]);
   return (
     <div
-      className=" w-full h-[100vh] flex z-[10] bg-gray-900 relative overflow-hidden"
+      className=" w-full h-[100vh] flex flex-col z-[10] relative overflow-hidden"
       ref={techContainer}
     >
       <OverLay />
-      <Title title={"Tech."} color={"text-[white]"} />
+      <Title title={"Tech."} color={"text-[[#ff98a2]]"} />
       <ul className="flex flex-row w-full gap-5 items-center h-full ">
         {skillList.map((skill) => (
           <motion.li
             style={{ x }}
             key={skill.name}
-            className="min-w-[12rem] bg-black h-[12rem] flex flex-col gap-5 items-center justify-center border border-white "
+            className="min-w-[6rem] bg-transparent h-[6rem] rounded-lg flex flex-col gap-5 items-center justify-center border border-[#ff98a2] "
           >
-            <div className="text-[1.5rem] text-white">{skill.icon}</div>
-            <div className="text-[#ff98a2] text-sm">{skill.name}</div>
+            <div className=" text-black">{skill.icon}</div>
+            <div className=" text-sm">{skill.name}</div>
+          </motion.li>
+        ))}
+      </ul>
+      <ul className="flex flex-row w-full gap-5 items-center h-full ">
+        {skillList2.map((skill) => (
+          <motion.li
+            style={{ x }}
+            key={skill.name}
+            className="min-w-[6rem] bg-transparent h-[6rem] rounded-lg flex flex-col gap-5 items-center justify-center border border-[#ff98a2] "
+          >
+            <div className=" text-black">{skill.icon}</div>
+            <div className=" text-sm">{skill.name}</div>
           </motion.li>
         ))}
       </ul>

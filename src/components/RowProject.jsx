@@ -3,8 +3,8 @@
 const RowProject = ({ title, index, setModal }) => {
   return (
     <div
-      style={{ transition: "all 0.4s ease" }}
-      className="group hover:opacity-[0.4] border border-black border-x-0 p-5 flex justify-between items-center "
+      style={{ transition: "all 0.2s linear" }}
+      className="group hover:opacity-[0.4] border border-x-0 p-7 flex justify-between items-center border-b-gray-400 "
       onMouseEnter={() => {
         setModal({ active: true, index: index });
       }}
@@ -13,14 +13,14 @@ const RowProject = ({ title, index, setModal }) => {
       }}
     >
       <h2
-        className="text-[2rem] group-hover:translate-x-[10px]"
-        style={{ transition: "all 0.4s ease" }}
+        className="text-[2rem] group-hover:translate-x-[10px] uppercase font-semibold"
+        style={{ transition: "all 0.2s linear" }}
       >
         {title}
       </h2>
       <span
         className="text-[14px] group-hover:translate-x-[-10px]"
-        style={{ transition: "all 0.4s ease" }}
+        style={{ transition: "all 0.2s linear" }}
       >
         Design & Development
       </span>

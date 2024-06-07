@@ -52,9 +52,7 @@ const Phrase = ({  text }) => {
   return (
     <div className=" flex flex-row px-2 gap-2 items-center text-nowrap">
       <p className=" text-[4rem] uppercase">{text}</p>
-      {/* <span className="relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden">
-        <img src={src} alt="" style={{ objectFit: "cover" }} />
-      </span> */}
+     
     </div>
   );
 };
