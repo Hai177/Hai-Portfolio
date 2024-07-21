@@ -29,24 +29,24 @@ const liVar = {
 const Header = () => {
   const [activeSection, setActiveSection] = useState("Home");
   return (
-    <header className="z-[9999]">
+    <header className="z-[100]">
       <motion.div
         {...nav}
-        className=" border  border-gray-300 fixed top-8 left-1/2 h-12 w-[40%] flex items-center justify-around rounded-full -translate-x-1/2 shadow-lg shadow-black/[0.06] overflow-hidden backdrop-blur-[0.5rem] bg-white font-medium "
+        className="fixed left-1/2 top-8 flex h-12 w-[40%] -translate-x-1/2 items-center justify-around overflow-hidden rounded-full border border-gray-300 bg-white font-medium shadow-lg shadow-black/[0.06] backdrop-blur-[0.5rem]"
       ></motion.div>
-      <motion.ul className=" fixed bg-transparent top-8 left-1/2 h-12 w-[40%] flex items-center justify-around rounded-full -translate-x-1/2 ">
+      <motion.ul className="fixed left-1/2 top-8 flex h-12 w-[40%] -translate-x-1/2 items-center justify-around rounded-full bg-transparent">
         {headerList.map((item, index) => (
           <motion.li
             variants={liVar}
             initial="initial"
             animate="animate"
             custom={index}
-            className="font-semibold relative h-3/4 flex items-center justify-center text-gray-400 hover:text-gray-950 ease-linear duration-300"
+            className="relative flex h-3/4 items-center justify-center font-semibold text-gray-400 duration-300 ease-linear hover:text-gray-950"
             key={item.name}
             onClick={() => setActiveSection(item.name)}
           >
             <a
-              className={`flex  justify-center p-3 py-3 items-center h-full w-[60%] rounded-full ${
+              className={`flex h-full w-[60%] items-center justify-center rounded-full p-3 py-3 ${
                 activeSection === item.name ? "text-black" : ""
               }`}
               href={item.path}
@@ -57,7 +57,7 @@ const Header = () => {
               <motion.div
                 layoutId="under"
                 transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                className="bg-[#FF98A2] rounded-full w-full h-full absolute bottom-0 -z-10"
+                className="absolute bottom-0 -z-10 h-full w-full rounded-full bg-[#FF98A2]"
               ></motion.div>
             )}
           </motion.li>

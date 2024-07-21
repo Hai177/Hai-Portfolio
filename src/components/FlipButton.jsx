@@ -34,17 +34,12 @@ const FlipButton = ({ title, href }) => {
   return (
     <a
       href={href}
-      className="relative cursor-pointer overflow-hidden h-4"
+      className="relative h-4 cursor-pointer overflow-hidden"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <FlipRow
-        title={title}
-        variants={slideFirst}
-        hover={hover}
-       
-      />
-      <div className="absolute top-0 left-0 h-full 00">
+      <FlipRow title={title} variants={slideFirst} hover={hover} />
+      <div className="00 absolute left-0 top-0 h-full">
         <FlipRow
           title={title}
           variants={slideSecond}
@@ -62,7 +57,7 @@ const FlipRow = ({ title, variants, hover }) => {
       variants={variants}
       initial="initial"
       animate={hover ? "animate" : "initial"}
-      className={`h-4 leading-4 whitespace-nowrap  `}
+      className={`h-4 whitespace-nowrap leading-4`}
     >
       {title}
     </motion.div>

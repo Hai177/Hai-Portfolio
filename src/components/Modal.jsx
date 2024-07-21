@@ -71,18 +71,18 @@ const Modal = ({ projects, modal }) => {
         variants={scaleVar}
         initial={"initial"}
         animate={active ? "open" : "close"}
-        className="flex h-[300px] w-[400px] items-center justify-center absolute pointer-events-none overflow-hidden "
+        className="pointer-events-none absolute flex h-[300px] w-[400px] items-center justify-center overflow-hidden"
       >
         <div
           style={{
             top: index * -100 + "%",
             transition: " top 0.5s cubic-bezier(0.76, 0, 0.24, 1) ",
           }}
-          className="absolute w-full h-full "
+          className="absolute h-full w-full"
         >
           {projects.map((project, index) => (
             <div
-              className="h-full flex items-center justify-center w-full"
+              className="flex h-full w-full items-center justify-center"
               key={`modal${index}`}
               style={{ backgroundColor: project.color }}
             >
@@ -90,7 +90,7 @@ const Modal = ({ projects, modal }) => {
                 src={`/img/${project.src}`}
                 alt=""
                 style={{ objectFit: "cover" }}
-                className="w-[250px] h-auto"
+                className="h-auto w-[250px]"
               />
             </div>
           ))}
@@ -101,14 +101,14 @@ const Modal = ({ projects, modal }) => {
         initial={"initial"}
         animate={active ? "open" : "close"}
         ref={cursor}
-        className="size-[60px] rounded-full bg-[#ff98a2] absolute pointer-events-none text-white font-semibold flex items-center justify-center cursor-pointer"
+        className="pointer-events-none absolute flex size-[60px] cursor-pointer items-center justify-center rounded-full bg-[#ff98a2] font-semibold text-white"
       ></motion.div>
       <motion.div
         variants={scaleVar}
         initial={"initial"}
         animate={active ? "open" : "close"}
         ref={cursorLabel}
-        className="size-[60px] rounded-full bg-[#ff98a2] absolute pointer-events-none text-black font-semibold flex items-center justify-center cursor-pointer"
+        className="pointer-events-none absolute flex size-[60px] cursor-pointer items-center justify-center rounded-full bg-[#ff98a2] text-[12px] font-semibold uppercase text-black"
       >
         View
       </motion.div>

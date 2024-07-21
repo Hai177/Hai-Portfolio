@@ -40,7 +40,7 @@ const FlipButtonIcon = ({ href, title, Icon }) => {
   return (
     <a
       href={href}
-      className="relative cursor-pointer uppercase font-semibold text-[12px] rounded-lg overflow-hidden"
+      className="relative cursor-pointer overflow-hidden rounded-lg text-[12px] font-semibold uppercase"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
@@ -48,7 +48,7 @@ const FlipButtonIcon = ({ href, title, Icon }) => {
         variants={slideFirst}
         initial="initial"
         animate={hover ? "animate" : "initial"}
-        className="h-full p-3 bg-[#ff98a2] w-full flex items-center gap-3 origin-top"
+        className="flex h-full w-full origin-top items-center gap-3 bg-[#ff98a2] p-3"
       >
         <span>{title}</span> <Icon />
       </motion.div>
@@ -56,7 +56,7 @@ const FlipButtonIcon = ({ href, title, Icon }) => {
         variants={slideSecond}
         initial="initial"
         animate={hover ? "animate" : "initial"}
-        className="absolute bg-black text-white p-3 top-0 left-0 h-full w-full flex items-center gap-3 origin-bottom"
+        className="absolute left-0 top-0 flex h-full w-full origin-bottom items-center gap-3 bg-black p-3 text-white"
       >
         <span>{title}</span> <Icon />
       </motion.div>

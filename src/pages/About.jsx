@@ -3,7 +3,7 @@ import { GoArrowRight } from "react-icons/go";
 import { IoMdHand } from "react-icons/io";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import Title from "../components/Title";
+
 import FlipButtonIcon from "../components/FlipButtonIcon";
 import { useSectionInView } from "../hooks/useSectionInView.jsx";
 const paragraph = `Hi, I'm Nguyen Phuoc Hai. I'm a Front-end Developer. I enjoy to
@@ -53,25 +53,24 @@ const About = () => {
 
   const isInView = useInView(paragraphContainer, { once: true });
   const words = paragraph.split(" ");
-  const { ref } = useSectionInView("About",0.75);
+  const { ref } = useSectionInView("About", 0.75);
   return (
     <div
       id="about"
-      className="h-[100vh] w-full z-10 flex flex-col gap-5 items-center justify-center relative"
+      className="relative z-10 flex h-[90vh] w-full flex-col items-center justify-center gap-5 max-md:h-[80vh]"
       ref={ref}
     >
-      <Title title={"About."} color={"text-gray-950"} />
-
-      <div className="flex w-1/2 flex-col gap-5 items-center justify-center px-[5%] text-center">
+      <div className="mask2 max-md:text-[4rem]">about</div>
+      <div className="flex w-1/2 flex-col items-center justify-center gap-5 px-[5%] text-center max-md:w-full">
         <div className="" ref={paragraphContainer}>
           <span>
             {" "}
-            <IoMdHand className="size-9 text-yellow-500 " />
+            <IoMdHand className="size-9 text-yellow-500" />
           </span>
           {words.map((word, index) => (
             <span
               key={word + index}
-              className="overflow-hidden mr-2 relative inline-flex"
+              className="relative mr-2 inline-flex overflow-hidden"
             >
               <motion.span
                 className={`relative block ${
@@ -100,9 +99,9 @@ const About = () => {
           />
         </motion.div>
       </div>
-      <div className="flex flex-col gap-5 w-1/3 items-center">
+      <div className="flex w-1/3 flex-col items-center gap-5 px-[5%] max-md:w-full">
         <div className="font-semibold">Explore my skills</div>
-        <ul className="flex flex-row flex-wrap gap-2 w-full items-center justify-center overflow-hidden">
+        <ul className="flex w-full flex-row flex-wrap items-center justify-center gap-2 overflow-hidden">
           {skillList3.map((skill, index) => (
             <motion.li
               key={skill}
@@ -110,7 +109,7 @@ const About = () => {
               initial="initial"
               animate={isInView ? "animate" : "initial"}
               custom={index}
-              className=" bg-transparent border border-[#ff98a2] rounded-lg p-3"
+              className="rounded-lg border border-[#ff98a2] bg-transparent p-3 font-medium text-gray-400 duration-300 ease-in-out hover:scale-105 hover:text-gray-900"
             >
               {skill}
             </motion.li>

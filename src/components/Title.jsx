@@ -10,7 +10,7 @@ const Title = ({ title, color }) => {
         opacity: 1,
       }}
       viewport={{ once: true }}
-      className={`text-[3rem] ${color} top-[10%] left-[2%] absolute`}
+      className={`text-[3rem] ${color} absolute left-[2%] top-[10%]`}
       style={{
         y: 0,
         x: -100,
