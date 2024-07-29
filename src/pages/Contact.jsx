@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { memo, useRef } from "react";
 import FlipButton from "../components/FlipButton";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useSectionInView } from "../hooks/useSectionInView";
@@ -120,4 +120,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default memo(Contact);

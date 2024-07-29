@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 
 import Modal from "../components/Modal";
 import RowProject from "../components/RowProject";
@@ -55,4 +55,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default memo(Project);

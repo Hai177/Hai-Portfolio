@@ -3,6 +3,7 @@ import ParallaxText from "../components/ParallaxText";
 import anim from "../utils/animate";
 import OverLay from "../components/OverLay";
 import { useSectionInView } from "../hooks/useSectionInView";
+import { memo } from "react";
 const titleFirstVar = {
   initial: {
     y: 100,
@@ -81,4 +82,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);

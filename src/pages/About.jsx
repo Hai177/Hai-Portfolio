@@ -2,7 +2,7 @@ import { HiOutlineDownload } from "react-icons/hi";
 import { GoArrowRight } from "react-icons/go";
 import { IoMdHand } from "react-icons/io";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { memo, useRef } from "react";
 
 import FlipButtonIcon from "../components/FlipButtonIcon";
 import { useSectionInView } from "../hooks/useSectionInView.jsx";
@@ -120,4 +120,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default memo(About);

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { GoDotFill } from "react-icons/go";
 const slideUp = {
   initial: {
@@ -67,4 +67,4 @@ const PreLoader = () => {
   );
 };
 
-export default PreLoader;
+export default memo(PreLoader);
