@@ -35,7 +35,7 @@ const slideSecond = {
     },
   },
 };
-const FlipButtonIcon = ({ href, title, Icon }) => {
+const FlipButtonIcon = ({ href, title, Icon, target }) => {
   const [hover, setHover] = useState(false);
   return (
     <a
@@ -43,6 +43,7 @@ const FlipButtonIcon = ({ href, title, Icon }) => {
       className="relative cursor-pointer overflow-hidden rounded-lg text-[12px] font-semibold uppercase"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      target={target && "_blank"}
     >
       <motion.div
         variants={slideFirst}

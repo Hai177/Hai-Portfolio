@@ -88,14 +88,16 @@ const About = () => {
         </div>
         <motion.div className="flex flex-row gap-5">
           <FlipButtonIcon
-            href={"#"}
+            href={"#contact"}
             title={"Contact me here"}
             Icon={GoArrowRight}
+            target={false}
           />
           <FlipButtonIcon
-            href={"#"}
+            href="https://drive.google.com/file/d/1QD_p8NKLj148AEkvRWlWnRc1I7RkKpR5/view?usp=sharing"
             title={"Download CV"}
             Icon={HiOutlineDownload}
+            target={true}
           />
         </motion.div>
       </div>

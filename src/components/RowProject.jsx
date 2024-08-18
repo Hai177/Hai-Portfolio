@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 
-const RowProject = ({ title, index, setModal }) => {
+const RowProject = ({ title, index, setModal, link }) => {
   return (
-    <div
+    <a
+      href={link}
+      target="_blank"
       style={{ transition: "all 0.2s linear" }}
       className="group flex items-center justify-between border border-x-0 border-b-gray-400 p-7 hover:opacity-[0.4]"
       onMouseEnter={() => {
@@ -24,7 +26,7 @@ const RowProject = ({ title, index, setModal }) => {
       >
         Design & Development
       </span>
-    </div>
+    </a>
   );
 };
 

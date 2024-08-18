@@ -6,24 +6,28 @@ import { useSectionInView } from "../hooks/useSectionInView";
 
 const projects = [
   {
-    title: "Auvers Sur Oise",
-    src: "auvers-sur-oise.jpg",
+    title: "Homie Hava Homestay",
+    src: "/img/hana.png",
     color: "#000000",
+    link: "https://github.com/Hai177/homie-hava-homestay",
   },
   {
-    title: "Starry Night",
-    src: "starry-night.jpg",
+    title: "VTI Management",
+    src: "/img/vti.png",
     color: "#8C8C8C",
+    link: "https://github.com/Hai177/vti-user-management",
   },
   {
-    title: "View Of Arles",
-    src: "view-of-arles.jpg",
+    title: "Hoang Profile",
+    src: "/img/hoangcv.png",
     color: "#EFE8D3",
+    link: "https://github.com/Hai177/hoang-profile",
   },
   {
-    title: "Wheate Field",
-    src: "wheat-field.jpg",
+    title: "Pod Management",
+    src: "/img/pod.png",
     color: "#706D63",
+    link: "https://github.com/Hai177/homie-hava-homestay",
   },
 ];
 const Project = () => {
@@ -42,6 +46,7 @@ const Project = () => {
         <div className="mx-auto h-auto w-[90%] overflow-hidden">
           {projects.map((project, index) => (
             <RowProject
+              link={project.link}
               key={project.title}
               title={project.title}
               index={index}

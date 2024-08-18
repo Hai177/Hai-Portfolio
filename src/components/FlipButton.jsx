@@ -37,6 +37,7 @@ const FlipButton = ({ title, href }) => {
       className="relative h-4 cursor-pointer overflow-hidden"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      target="_blank"
     >
       <FlipRow title={title} variants={slideFirst} hover={hover} />
       <div className="00 absolute left-0 top-0 h-full">

@@ -87,10 +87,10 @@ const Modal = ({ projects, modal }) => {
               style={{ backgroundColor: project.color }}
             >
               <img
-                src={`/img/${project.src}`}
+                src={`${project.src}`}
                 alt=""
                 style={{ objectFit: "cover" }}
-                className="h-auto w-[250px]"
+                className="h-auto w-[300px]"
               />
             </div>
           ))}

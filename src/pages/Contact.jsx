@@ -6,19 +6,19 @@ import { useSectionInView } from "../hooks/useSectionInView";
 const socials = [
   {
     name: "Facebook",
-    link: "#",
+    link: "https://www.facebook.com/profile.php?id=100009950355700",
   },
   {
     name: "Instagram",
-    link: "#",
+    link: "https://www.instagram.com/_ha1_______/",
   },
   {
     name: "GitHub",
-    link: "#",
+    link: "https://github.com/Hai177",
   },
   {
     name: "Linkedln",
-    link: "#",
+    link: "https://www.linkedin.com/in/h%E1%BA%A3i-nguy%E1%BB%85n-419668323/",
   },
 ];
 const Contact = () => {
@@ -95,9 +95,9 @@ const Contact = () => {
               </div>
               <div className="">
                 <div className="mb-2 font-light uppercase">Contact Details</div>
-                <div>
-                  <div className="font-semibold">haihv177@gmail.com</div>
-                  <div className="font-semibold">+84 935 647 651</div>
+                <div className="flex flex-col">
+                  <a href="mailto:haihv177@gmail.com" target="_blank" className="font-semibold cursor-pointer">haihv177@gmail.com</a>
+                  <a href="tel:+84935647651" className="font-semibold cursor-pointer">+84 935 647 651</a>
                 </div>
               </div>
               <div>
