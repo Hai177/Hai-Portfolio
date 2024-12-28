@@ -94,7 +94,7 @@ const About = () => {
             target={false}
           />
           <FlipButtonIcon
-            href="https://drive.google.com/file/d/1h4A7X2BHR8G6Z3qimzSAtwWRaWyEEENU/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1UHThyRFxi3SgXpOwwG5YkHiTgW4-ht4k/view?usp=drive_link"
             title={"Download CV"}
             Icon={HiOutlineDownload}
             target={true}
